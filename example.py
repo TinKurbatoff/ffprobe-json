@@ -15,10 +15,11 @@ if __name__ == '__main__':
         exit(1)
     print(f'File: {args.input}')
     # (quiet=True) —suppress error output of ffprobe
-    ffprobe_result, error = ffprobe(file_path=args.input, quiet=False)
+    ffprobe_result, error = ffprobe(file_path=args.input, quiet=True)
 
     ## Print beauty format
-    print(json.dumps(ffprobe_result, indent=2)) 
+    # print(json.dumps(ffprobe_result, indent=2)) 
+    print(ffprobe_result['streams'][0]['width'])
     print(error)
 
 

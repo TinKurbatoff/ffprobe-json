@@ -22,5 +22,14 @@ def ffprobe(file_path, quiet=True):
     else:
         return {},{'error':'File not found'}
 
+def ffprobe_thumbnail(file_path, output_image=None):
+    if os.path.isfile(file_path):
+        if not output_image:
+            output_image = f"{file_path}.jpg"    
+        subprocess.call(['ffmpeg', '-i', file_path, '-ss', '00:00:00.000', '-vframes', '1', output_image])
+        return output_image
+    else:
+        return {'error':'File not found'}
+
 if __name__ == '__main__':
     print("This is the module for ffprobing media files" )
