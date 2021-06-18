@@ -24,8 +24,10 @@ Then
 
 ## To check how it works:
 
+```
 $ git clone https://github.com/TinKurbatoff/ffprobe-json
 $ cd ffprobe-json
 $ python3 example.py -i "/your/media_file.mp4"
+```
 
 ## Enjoy!
