@@ -10,7 +10,7 @@
 $ git clone https://github.com/TinKurbatoff/ffprobe-json
 
 Then
-````
+```
     #python3
     from ffprobe_json import ffprobe
 
